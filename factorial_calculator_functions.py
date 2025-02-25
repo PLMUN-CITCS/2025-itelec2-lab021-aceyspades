@@ -1,15 +1,10 @@
 def get_non_negative_integer() -> int:
-    while True:
-        try:
-            n = int(input("Enter a non-negative integer: "))
-            if n >= 0:
-                return n
-            else:
-                print("Please enter a non-negative integer.")
-        except ValueError:
-            print("Invalid input! Please enter a valid integer.")
+    n = int(input("Enter a non-negative integer: "))
+    return n
 
 def calculate_factorial(n: int) -> int:
+    if n == 0:
+        return 1
     factorial = 1
     for i in range(1, n + 1):
         factorial *= i
